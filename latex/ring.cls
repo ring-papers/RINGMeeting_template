@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% This is file ring20.cls'  %%
+%% This is file ring21.cls'  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %% Made by: Francois Bonneau & Guillaume Caumon
@@ -28,10 +28,13 @@
 % Year specific variables
 \newcommand{\meetingedition}{2021}
 \newcommand{\meetingdate}{September 2021}
+
+
+\usepackage[utf8]{inputenc}
 %
 %
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
-\ProvidesClass{ring}[2021/02/12 RING Proceedings Class]
+\ProvidesClass{ring}[2021/04/12 RING Proceedings Class]
 %%
 %% Pass all options directly to 'article'
 %%
@@ -161,9 +164,7 @@
 %\setlength{\bibhang}{1em} % indentation of second line in bibitem
 %\bibliographystyle{ring} % stylefile
 
-%%% Section modified from agujournal2019 LaTeX Template. 
-
-\bibliographystyle{apaRING}
+\bibliographystyle{RING}
 \RequirePackage[natbibapa]{apacite}
 %\RequirePackage{natbib}
 %\let\cite\shortcite %xx So get et al. with three authors the first time.

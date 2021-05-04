@@ -1,6 +1,6 @@
 %%
 %% This is file `apaRING.bst', modified from apacite.bst to remove url
-%% from papers and include hyperlinked doi.
+%% from papers, include hyperlinked doi and use small caps for names.
 %%
 %% The original source files were:
 %%
@@ -672,25 +672,24 @@ FUNCTION {start.new.block}
   "\newblock " write$ newline$
 }
 
-FUNCTION {sort.name.format.classic} { "{ll{}}{  f{}}{  vv{}}{  jj{}}" }
+FUNCTION {smallcaps}
+{ duplicate$ empty$
+    { pop$ "" }
+    { "\textsc{" swap$ * "}" * }
+  if$
+}
 
-FUNCTION {cite.name.format.classic} { "{ll}" }
+FUNCTION {sort.name.format} { "{{\scshape\bgroup}vv {\egroup}}{{\scshape\bgroup}ll{ }{\egroup}}{  f{}}{  jj{}}" }
 
-FUNCTION {author.name.format.classic} { "{ll}{, f{\BPBI }.}{ vv}{, jj}" }
+FUNCTION {cite.name.format} { "{{\scshape\bgroup}vv {\egroup}}{{\scshape\bgroup}ll{ }{\egroup}}" }
 
-FUNCTION {index.name.format.classic} { "{ll}{, f{\BPBI }.}{ vv}{, jj}" }
+FUNCTION {cite.initials.name.format} { "{f{\BPBI }~~}{vv }{{\scshape\bgroup}ll{ }{\egroup}}{ jj}" }
 
-FUNCTION {sort.name.format} { "{vv{}}{ll{}}{  f{}}{  jj{}}" }
+FUNCTION {author.name.format} { "{{\scshape\bgroup}vv {\egroup}}{{\scshape\bgroup}ll{ }{\egroup}}{, f{\BPBI }}{, jj}" }
 
-FUNCTION {cite.name.format} { "{vv }{ll}" }
+FUNCTION {editor.name.format} { "{f{\BPBI }~~}{{\scshape\bgroup}vv {\egroup}}{{\scshape\bgroup}ll{ }{\egroup}}{ jj}" }
 
-FUNCTION {cite.initials.name.format} { "{f{\BPBI }.~~}{vv }{ll}{ jj}" }
-
-FUNCTION {author.name.format} { "{vv }{ll}{, f{\BPBI }.}{, jj}" }
-
-FUNCTION {editor.name.format} { "{f{\BPBI }.~~}{vv }{ll}{ jj}" }
-
-FUNCTION {index.name.format} { "{vv }{ll}{, f{\BPBI }.}{, jj}" }
+FUNCTION {index.name.format} { "{{\scshape\bgroup}vv {\egroup}}{{\scshape\bgroup}ll{ }{\egroup}}{, f{\BPBI }.}{, jj}" }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -814,13 +813,13 @@ FUNCTION {check.add.initials}
 FUNCTION {tentative.cite.num.names.field}
 { 'field :=
   field num.names$  'numnames :=
-  numnames #3 <
+  numnames #4 <
     {   %
         % 1 or 2 names: always cite all of them.
       numnames  'cite.num.names.full  :=
       numnames  'cite.num.names.short :=
     }
-    { numnames #6 <
+    { numnames #4 <
         {   %
             % 3-5 names: cite all of them the first time,
             % only the first name later times
@@ -2058,19 +2057,15 @@ FUNCTION {make.citeorder.number}
   cite.order conv.int.to.str 'citeorder.sort.label :=
 }
 
-FUNCTION {last.part.name.format.classic} { "{ll}" }
-
-FUNCTION {von.junior.name.format.classic} { "{ vv}{, jj}" }
-
 FUNCTION {last.part.name.format} { "{vv }{ll}" }
 
-FUNCTION {initials.with.space.name.format} { "{f.}" }
+FUNCTION {initials.with.space.name.format} { "{f{}}" }
 
 FUNCTION {von.last.junior.name.format} { "{vv }{ll}{ jj}" }
 
 FUNCTION {von.junior.name.format} { "{, jj}" }
 
-FUNCTION {one.complete.name.format} { "{vv }{ll}{, jj}{, ff}" }
+FUNCTION {one.complete.name.format} { "{{\scshape\bgroup}vv {\egroup}}{{\scshape\bgroup}ll{ }{\egroup}}{, jj}{ f{}}" }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -3020,7 +3015,7 @@ FUNCTION {format.author.names}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 FUNCTION {format.authors}
-{ #1 author format.author.names }
+{ #1 author  format.author.names }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

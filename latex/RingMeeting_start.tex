@@ -14,9 +14,10 @@
 %-----------------------------------------
 % Template Mode preprint / final:
 
-%\documentclass[preprint]{ring} 
 
+% First, choose if you want to generate a preprint or final version. 
 % Please : submit your paper in the final mode
+%\documentclass[preprint]{ring} 
 \documentclass[final]{ring} 
 
 %% relative path to the graphic folder from the tex file
@@ -28,7 +29,7 @@
 % First page information :
 
 % Main Title of the first page
-\title{A RING paper template with some writing instructions \newline (G. Caumon April 2020).}
+\title{A RING paper template with some writing instructions \newline (G. Caumon April 2021).}
 
 
 % Author(s) name(s) on the first page
@@ -38,7 +39,7 @@
 
 %Adresses of the authors (affiliations)  
 %affiliation RING (2020) --> équipe, Composantes, Tutelles, Localisation
-\affil[1]{RING, GeoRessources / ENSG, Universit\'e de Lorraine / CNRS, F-54000 Nancy}
+\affil[1]{RING, GeoRessources / ENSG, Université de Lorraine / CNRS, F-54000 Nancy}
 \affil[2]{Team, Laboratory, Organization, Zip code, Country}
 
 %-----------------------------------------
@@ -74,13 +75,16 @@ Writing style should aim at unrolling a logical reasoning and progression: befor
 
 \subsection{Citations}
 
-Citations are essential to justify some statements, to help the reader find prior work in the field and to give credits to fellow scientists who inspired or motivated your work. In RING Papers, we recommend the use of the American Geophysical Union citation style (APA, sixth Edition). To avoid a tedious enumeration of citation formats, we strongly recommend the use of Zotero or Mendeley Word plugins to make sure that citation style is respected. A full description of citation format is available on \url{https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Grammar-Style-Guide#referenceformat}, but everything can be automated easily in \LaTeX.
+Citations are essential to justify some statements, to help the reader find prior work in the field and to give credits to fellow scientists who inspired or motivated your work. 
 
-\subsubsection{Some \LaTeX\ Commands}
+In RING Papers, we we use a modified APA (sixth Edition) style with author names in small capitals. To avoid a tedious enumeration of citation formats, we provide the RING2021.bst file which can be used with BibTeX \footnote{If you prefer, we also provide the RING2021.cls citation language file which can be used using Zotero and Mendeley. Note that pandoc can use CSL files in principle, but we have not tested it.}
+
+\subsubsection{\LaTeX\ Commands for citation with BibTeX}
 
 References that support a sentence can be cited easily in alphabetical order using \verb|\citep{key}|, for example:``Several textbooks and reviews have extensively discussed theoretical and applied geomodeling \citep[e.g.,][]{Mallet2002, Mallet2014, Perrin2013, Ringrose2015, Wellmann2018AG}''. In this example, the pre-citation text was included using \verb|\citep[e.g.,][]{key1,key2,| \verb|etc}|. For post-citation text as in ``\citep[chap. 3][]{Mallet2002}'', use \verb|\citep[][Chap. 3]{key}|. Both can be combined using for example \verb|\citep[See][and references therein]{key}|, which produces: ``\citep[See][and references therein]{Wellmann2018AG}''. 
 
 Direct citations in a sentence with author names followed by publication year in parenthesis are obtained using \verb|\citet{key}|, for example: ``\citet{Perrin2013} propose several ontologies''. 
+Here is another example of references with more authors \citep{Collon2017G, Freeman1990FB, Kolditz2012EES}: when more than three authors are present, only the first author is mentioned, followed by `et al.'. 
 
 \subsection{Figures}
 % That's how a figure should be included. You can use JPG/PNG/PDF images, or
@@ -126,7 +130,7 @@ The conclusions are the main take-away messages of your paper.
 
 \section*{Acknowledgments}
 
-Typical acknowledgements for RING sponsored work read ``This work was performed in the frame of the RING project (http://ring.georessources.univ-lorraine.fr/) at Université de Lorraine. We would like to thank for their support [the industrial and academic sponsors of the RING-GOCAD Consortium managed by ASGA | other sponsors]. The authors would also like to thank [people] for [...] and [organizations] for providing the data used in this study. The software corresponding to this paper is available as [software name | the GoNURBS plugin of SKUA-Gocad geomodeling software]. We also acknowledge [Paradigm for the SKUA-Gocad Software and development kit | Schlumberger for the Eclipse software | INRIA for the Geogram library | any other professional software used].''
+Typical acknowledgements for RING sponsored work read ``This work was performed in the frame of the RING project (http://ring.georessources.univ-lorraine.fr/) at Université de Lorraine. We would like to thank for their support [the industrial and academic sponsors of the RING-GOCAD Consortium managed by ASGA | other sponsors]. The authors would also like to thank [people] for [...] and [organizations] for providing the data used in this study. The software corresponding to this paper is available as [software name | example: GoNURBS plugin of SKUA-Gocad geomodeling software]. We also acknowledge [Paradigm for the SKUA-Gocad Software and development kit | Schlumberger for the Eclipse software | INRIA for the Geogram library | any other professional software used].''
 
 % Set your BibTeX bibliography file here (without .bib)
 % Bibliographystyle is defined in the RING class
