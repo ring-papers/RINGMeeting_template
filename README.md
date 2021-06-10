@@ -18,3 +18,7 @@ Files are available in the "latex" folder.
  * RINGMeeting_start.pdf: compiled pdf in '''final''' mode (FOR SUBMISSION).
  * ring.cls: Implementation of the LaTeX class for the template. DO NOT EDIT!
  * RING.bst: implementation of a the bibliographic style (with apacite) for the conference. DO NOT EDIT!
+
+## slides template:
+A template for slides is provided in the slides folder.
+ * RINGMeeting_slides.potx: file to initialize your power point presentation.
