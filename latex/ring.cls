@@ -26,15 +26,15 @@
 %%
 %--------------------------------------------------------
 % Year specific variables
-\newcommand{\meetingedition}{2021}
-\newcommand{\meetingdate}{September 2021}
+\newcommand{\meetingedition}{2022}
+\newcommand{\meetingdate}{June 2022}
 
 
 \usepackage[utf8]{inputenc}
 %
 %
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
-\ProvidesClass{ring}[2021/04/12 RING Proceedings Class]
+\ProvidesClass{ring}[2022/04/12 RING Proceedings Class]
 %%
 %% Pass all options directly to 'article'
 %%
