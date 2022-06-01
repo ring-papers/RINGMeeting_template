@@ -2,12 +2,12 @@
 
 This project contains templates for authors who want to contribute to the RING Meeting.
 It contains for both LaTeX, Microsoft Word files, including bst and csl file for reference formating built on top of APA styles.
-The template also contrains instructions about good writing priceteces for scientific papers. 
+The template also contrains guidelines about good writing practice for scientific papers. 
 
-## Microsoft word template:
+## Microsoft Word template:
 Files are available in the "word" folder.
  * Edit the RINGMeeting_template.docx file
- * DO NOT forget to use the custom citation style: RING.csl
+ * DO NOT forget to use the custom citation style: RING.csl. This template can be used for example using Word's Zotero plugin. 
 
 ## Latex template:
 Files are available in the "latex" folder.
@@ -21,4 +21,4 @@ Files are available in the "latex" folder.
 
 ## slides template:
 A template for slides is provided in the slides folder.
- * RINGMeeting_slides.potx: file to initialize your power point presentation.
+ * RINGMeeting_slides.potx: file to initialize your PowerPoint presentation.
