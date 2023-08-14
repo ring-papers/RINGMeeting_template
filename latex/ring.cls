@@ -130,7 +130,7 @@
 \null
 \vspace*{0.2cm}
 \begin{center}
-	{\Large \VAR@title \par} \vspace{4.5mm}
+	{\Large \textbf{\VAR@title} \par} \vspace{4.5mm}
 	{\normalsize \@author \par} \vspace{2.5mm}
 	{\normalsize \VAR@date \par} \vspace*{6.5mm}
 \end{center}
