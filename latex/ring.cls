@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %% Made by: Francois Bonneau & Guillaume Caumon
-%% Email: francois.bonneau@univ-lorraine.fr
+%% Email: marie.gallaire@univ-lorraine.fr
 % This style should be suitable for both Linux and Windows, and pdflatex or
 % latex (DVI) compilation.
 %
