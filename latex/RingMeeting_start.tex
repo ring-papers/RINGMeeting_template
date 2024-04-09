@@ -29,7 +29,7 @@
 % First page information :
 
 % Main Title of the first page
-\title{A RING Meeting paper template with some writing instructions \newline (G. Caumon April 2021, Revised November 2022).}
+\title{A RING Meeting paper template with some writing instructions \newline (G. Caumon April 2021, Revised April 2024).}
 
 
 % Author(s) name(s) on the first page
@@ -70,19 +70,19 @@ In terms of appearance, RING abstracts should have larger margins than text, and
 
 \section*{Introduction}
 
-The introduction should present the problem addressed to a general audience of geoscientists and engineers. A few general sentences can set the context and explain the importance of the work in layman terms. Using references (e.g., to textbooks or review papers) is paramount to support some of these statements and to set the scene. Then, you can move on to the objectives, research questions and challenges that are addressed in the paper. The end of the introduction can typically highlight in simple words the main methodological contributions (Section \ref{sec:Method}), the specifics of the application (Section \ref{sec:appli}) and the main discussion elements (Section \ref{sec:discussion})\footnote{It is best to announce sections as above using parentheses in the main text. Finishing the abstract with the outline is, in general, a bad practice because it is redundant with the table of content which is available in most digital papers.}.
+The introduction should present the problem addressed to a general audience of geoscientists and engineers. A few general sentences can set the context and explain the importance of the work in layman terms. Using references (e.g., to textbooks or review papers) is paramount to support some of these statements and to set the scene. Then, you can move on to the objectives, research questions and challenges that are addressed in the paper. The end of the introduction can typically highlight in simple words the main methodological contributions (Section \ref{Method}), the specifics of the application (Section \ref{appli}) and the main discussion elements (Section \ref{discussion})\footnote{It is best to announce sections as above using parentheses in the main text. Finishing the abstract with the outline is, in general, a bad practice because it is redundant with the table of content which is available in most digital papers.}.
 
 The introduction should help both the person new to the field and the expert to quickly learn and identify the interesting aspects of your paper. Writing a good introduction calls for already having a clear view of the contributions (what is new) in the paper, and contextualizing using references. Students writing their first paper may fall into the trap of trying to describe everything they have learned in the introduction (and in the paper). A good literature read (maybe starting with some good review papers) is essential to avoid this stumbling block and quickly get to the main point of the work. A paper is not an encyclopedia and cannot explain all the prior knowledge in detail. Therefore, it is best to know a bit about the readership of your paper. The key to a good introduction is to tell a compelling story which goes for the general motivation / problem to your contributions using the appropriate level of detail. As a general rule, the level of detail in an introduction should be the same as in paper abstracts, or even more synthetic. In general, the length of an introduction varies between a half page and two pages. It can help in many cases to support the introduction with a figure to express the problem and bulk idea / workflow of the paper. 
 
 We strongly recommend the reading of the `scrutiny of the introduction' \citep{Claerbout1988S}, as much as the `scrutiny of the abstract' \citep{Landes1966BAAPG} and the additional `abstract rescrutinized' \citep{Lowman1998G} for more useful recommendations on the writing of these two important sections of a paper. 
 
-\section{Materials and methods [Section title Can be changed to be more specific]}
-\label{sec:Method}
+\section{Materials and methods [Section title can be changed to be more specific]}
+\label{Method}
 
 The methods section is an essential part of most RING Proceedings papers. The algorithms should be precisely described or referenced using citations. It is a good practice to describe the general idea before going into the detailed descriptions. A workflow figure explaining the input, output and main steps of the method can be a great support for explaining the big picture. In some cases, it may even be presented in the general introduction. 
 Writing style should aim at unrolling a logical reasoning and progression: before writing, start to think about the overall story and about where you want to take the reader. List the ideas and try to organize them and decide about a possible presentation order that will follow a logical progression. It may seem like an obvious statement, but descriptions should always come before comments and discussions. 
 
-Beware that all models imply simplifications and rely on some assumptions. It is useful to make modeling hypotheses explicit and to briefly justify them (e.g., ``for convenience / simplicity, we assume that […]''. This is clearly where the use of the first person is appropriate, as it stresses some subjective decision or assumption made in the development of the method (elsewhere, please try to avoid the first person to focus on facts, unless in sentences where “we” means the reader and the authors, e.g., “We will now discuss the implications of theorem 3”). Nonetheless, extensive discussions on model assumptions should, in general, be avoided in the methods section but rather postponed to Section \ref{sec:discussion}.
+Beware that all models imply simplifications and rely on some assumptions. It is useful to make modeling hypotheses explicit and to briefly justify them (e.g., ``for convenience / simplicity, we assume that […]''. This is clearly where the use of the first person is appropriate, as it stresses some subjective decision or assumption made in the development of the method (elsewhere, please try to avoid the first person to focus on facts, unless in sentences where “we” means the reader and the authors, e.g., “We will now discuss the implications of theorem 3”). Nonetheless, extensive discussions on model assumptions should, in general, be avoided in the methods section but rather postponed to Section \ref{discussion}.
 
 \subsection{Citations}
 
@@ -92,7 +92,9 @@ In RING Papers, we we use a modified APA (sixth Edition) style with author names
 
 \subsubsection{\LaTeX\ Commands for citation with BibTeX}
 
-References that support a sentence can be cited easily in alphabetical order using \verb|\citep{key}|, for example:``Several textbooks and reviews have extensively discussed theoretical and applied geomodeling \citep[e.g.,][]{Mallet2002, Mallet2014, Perrin2013, Ringrose2015, Wellmann2018AG}''. In this example, the pre-citation text was included using \verb|\citep[e.g.,][]{key1,key2,| \verb|etc}|. For post-citation text as in ``\citep[chap. 3][]{Mallet2002}'', use \verb|\citep[][Chap. 3]{key}|. Both can be combined using for example \verb|\citep[See][and references therein]{key}|, yielding for example: ``Homogenization allows to transform a detailed elastic model into a smooth equivalent medium \citep[See][and references therein]{Capdeville2020AiG}''. Such precisions are important to add precision to the citation and to help the reader distinguish between example illustrating a general statement or some more specific contributions. 
+References that support a sentence can be cited easily in alphabetical order using \verb|\citep{key}|, for example:``Several textbooks and reviews have extensively discussed theoretical and applied geomodeling \citep[e.g.,][]{Mallet2002, Mallet2014, Perrin2013, Ringrose2015, Wellmann2018AG}''. 
+
+In this example, the pre-citation text was included using \verb|\citep[e.g.,][]{key1,key2,| \verb|etc}|. For post-citation text as in ``\citep[chap. 3][]{Mallet2002}'', use \verb|\citep[][Chap. 3]{key}|. Both can be combined using for example \verb|\citep[See][and references therein]{key}|, yielding for example: ``Homogenization allows to transform a detailed elastic model into a smooth equivalent medium \citep[See][and references therein]{Capdeville2020AiG}''. Such precisions are important to add precision to the citation and to help the reader distinguish between example illustrating a general statement or some more specific contributions. 
 
 Direct citations in a sentence with author names followed by publication year in parenthesis are obtained using \verb|\citet{key}|, for example: ``\citet{Perrin2013} propose several ontologies''. 
 Here is another example of references with more authors \citep{Collon2017G, Freeman1990FB, Kolditz2012EES}: when more than three authors are present, only the first author is mentioned, followed by `et al.'. 
@@ -125,8 +127,8 @@ f(\mathbf{m}| \mathbf{d} = \mathbf{d_{obs}} )=
 Further useful recommendations about how to write good mathematics (and, more generally, good papers) are given by \citet{Lee2010}.
 
 
-\section{Results / Application [Section title Can be changed to be more specific]}
-\label{sec:appli}
+\section{Results / Application [Section title can be changed to be more specific]}
+\label{appli}
 
 This is where you will discuss the application and results obtained. The past is generally the proper tense to describe physical or numerical experiments. However, you should use present when commenting results. For example:``We applied the proposed method to a Jurassic subsurface formation located the Eastern Paris Basin, France. […] Results show that […''.
 
@@ -137,8 +139,8 @@ There is a natural human tendency to only include positive results in papers. At
 Presenting and commenting results can be challenging. As in the main text, think about the story you want to tell. Plan ahead for creating figures where the features of interest clearly appear. Avoid paraphrasing figures in the main text or in the legend, but rather highlight the salient aspects and comment / interpret. A good results section should teach us something. 
 
 
-\section{Discussion [Section title Can be changed to be more specific]}
-\label{sec:discussion}
+\section{Discussion [Section title can be changed to be more specific]}
+\label{discussion}
 
 The discussion part is where you will discuss the implications of your work about the open problems discussed in the introduction. It is often appropriate to include references to feed the discussion and make it both broader and more substantial than a simple wish list fully centered on your work. 
 
@@ -161,7 +163,7 @@ plugin of SKUA-Gocad geomodeling software]. We also acknowledge [AspenTech for t
 
 % Set your BibTeX bibliography file here (without .bib)
 % Bibliographystyle is defined in the RING class
-\bibliography{my_biblio_file}
+\bibliography{MyBiblioFile}
 
 \end{document}
 

@@ -26,8 +26,8 @@
 %%
 %--------------------------------------------------------
 % Year specific variables
-\newcommand{\meetingedition}{2023}
-\newcommand{\meetingdate}{September 2023}
+\newcommand{\meetingedition}{2024}
+\newcommand{\meetingdate}{September 2024}
 
 
 \usepackage[utf8]{inputenc}
