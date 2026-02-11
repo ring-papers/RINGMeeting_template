@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %% Made by: Francois Bonneau & Guillaume Caumon
-%% Email: marie.gallaire@univ-lorraine.fr
+%% Email: honorine.bertin@univ-lorraine.fr
 % This style should be suitable for both Linux and Windows, and pdflatex or
 % latex (DVI) compilation.
 %
@@ -26,8 +26,8 @@
 %%
 %--------------------------------------------------------
 % Year specific variables
-\newcommand{\meetingedition}{2024}
-\newcommand{\meetingdate}{September 2024}
+\newcommand{\meetingedition}{2026}
+\newcommand{\meetingdate}{September 2026}
 
 
 \usepackage[utf8]{inputenc}
@@ -46,7 +46,7 @@
 %%
 %% prefered fontsize, papersize, and type
 %%
-\LoadClass[oneside,11pt,a4paper]{article}
+\LoadClass[twoside,11pt,a4paper]{article}
 %%
 %%
 \newcommand{\VAR@date} {}
@@ -55,7 +55,7 @@
 }
 \if@preprint
 	\RequirePackage[left]{lineno}
-	\linespread{1.5}
+	\linespread{1.8}
 	\linenumbers
 	\date{\today}
 \else
@@ -69,10 +69,10 @@
 %             {hauteur pied de page} {distance bas de page - bas
 %             pied de page}
 \RequirePackage{vmargin}
-\setmarginsrb{2cm}{3.5cm}{2cm}{15mm}{0cm}{0mm}{2.5cm}{1cm}
-\if@preprint\setmarginsrb{2cm}{1cm}{2cm}{15mm}{1cm}{0mm}{1cm}{1.5cm}\fi
+\setmarginsrb{2.5cm}{2.5cm}{2cm}{15mm}{0cm}{0mm}{2.5cm}{1cm}
+\if@preprint\setmarginsrb{2cm}{1cm}{2cm}{17mm}{1cm}{0mm}{1cm}{1.5cm}\fi
 
-\renewcommand{\floatpagefraction}{.9}
+\renewcommand{\floatpagefraction}{.95}
 
 %---------------------------------------------------
 % For title and title over-riding report

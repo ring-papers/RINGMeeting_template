@@ -1,0 +1,174 @@
+%
+% RING Meeting Template, based on the article class
+% Edit and compile with pdflatex
+%
+% If you absolutely want to use latex to produce DVI, be sure to use only
+% compatible graphisms (.eps is the best).
+% You can also include .eps figs only and use pdflatex (thanks to epstopdf),
+% just check that you have "shell_escape = 1" somewhere in a texmf.cnf file,
+% or that you call "pdflatex -shell-escape file.tex".
+%
+% This template uses natbib.sty bibliography style, so you can use commands
+% like \citet{}, \citep{}, \citeauthor{} or \citeyear{}.
+
+%-----------------------------------------
+% Template Mode preprint / final:
+
+
+% First, choose if you want to generate a preprint or final version. 
+% Please : submit your paper in the final mode, and rename as YourName_RM202x.tex
+\documentclass[preprint]{ring} 
+%\documentclass[final]{ring} 
+
+%% relative path to the graphic folder from the tex file    
+\graphicspath{%
+{./figures/}%
+}
+
+%-----------------------------------------
+% First page information :
+
+% Main Title of the first page
+\title{A RING Meeting paper template with some writing instructions \newline (G. Caumon April 2021, Revised Feb 2026).}
+
+
+% Author(s) name(s) on the first page
+\author[1]{FirstNameA LastNameA}
+\author[2]{FirstNameB LastNameB}
+\author[1,2]{FirstNameC LastNameC}
+
+%Adresses of the authors (affiliations)  
+%affiliation RING (2020) --> équipe, Composantes, Tutelles, Localisation
+\affil[1]{Université de Lorraine, CNRS, GeoRessources, F-54000 Nancy}
+\affil[2]{Organization, department, Zip code, Country}
+
+%-----------------------------------------
+% Footer information :
+
+% Author(s) name(s) -- LESS THAN 40 characters
+\shortauthor{Short Author (less than 40 Chars)} % 
+% Short title -- LESS THAN 40 characters
+\shorttitle{Short Title (less than 40 Chars)} 
+
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+
+This is the RING Meeting paper template. It contains information about the formatting of papers and general guidelines about how to write a good paper. Authors are encouraged to read and apply these guidelines. This will help co-authors and reviewers to focus on the scientific content rather than on form issues. 
+
+The goal of the abstract is to help fellow scientists to quickly identify what is in your paper. The abstract should focus on summarizing the \emph{content} of the paper and the main results. \emph{No more than one or two sentences should be dedicated to explaining the problem and stating the work’s objectives}. A good practice is to write the final abstract once the paper finished. This allows to briefly summarize the main elements of the paper (method / results / discussion) in a crisp and compact paragraph, avoiding references if possible. Even though the goal is to motivate readers to keep on, please banish the use of commercial terms (good, effective...) and rather make every effort to use precise scientific terms in the abstract. The right choice of words is essential for keeping the abstract as informative and compact as possible. The abstract should not just present the outline of the paper, but summarize the main results / findings. 
+
+In terms of appearance, RING abstracts should have larger margins than text, and a smaller font. Please do not break page after the abstract.
+
+\end{abstract}
+
+\emph{Please compile with the documentclass option [review] during iterations with your co-authors to facilitate annotations, and use the [final] option only when your paper is ready to print.}
+
+
+\section*{Introduction}
+
+The introduction should present the problem and the main contributions of the paper to a general audience of geoscientists and engineers. Writing a good introduction calls for already having a clear view of the contributions (what is new) in the paper, and contextualizing these contributions using references. Students writing their first paper may fall into the trap of trying to describe everything they have learned in the introduction (and in the paper), and mention many general aspects that have limited connections to the paper's contributions. Using general references to good review papers or textbooks in the first sentences of the introduction is often a good way to start gently and then quickly orient the reader towards the main point of the work contextualized with more detailed and specific references. Said differently, a paper is not an encyclopedia and cannot explain all the prior knowledge in detail. Rather, it aims at present what is new, and just needs references to contextualize and explain the problem and the novel aspects. 
+
+After setting the landscape, the introduction should quickly highlight the main research gaps and questions, and summarize in simple terms the main methodological contributions of the paper (Section \ref{Method}). It should also briefly announce the specifics of the application or validation approach (Section \ref{appli}) and the main discussion elements (Section \ref{discussion})\footnote{Please reference sections as above using parentheses in the main text, as this is the most compact way to tell the reader about where to find more details on the contributions. The common but bad practice to finish the introduction with a textual outline of the paper should be avoided, as it is redundant with the table of content which is available in most digital papers (J.R. Shewchuck lists this as one of \href{https://www.cs.cmu.edu/~jrs/sins.html}{the three sins of authors in computer science and math})!}.
+
+The key to a good introduction is to tell a compelling and short story using a logical progression which goes for the general motivation / problem to your detailed research questions and gaps to summarize the paper's contributions in simple but precise terms. As a general rule, the level of detail in an introduction should be about the same as that of the abstracts of the cited papers. In general, the length of an introduction varies between a half page and two pages. It can help in many cases to support the introduction with a figure to express the problem and bulk idea / workflow of the paper. 
+
+We strongly recommend the reading of the `scrutiny of the introduction' \citep{Claerbout1988S}, as much as the `scrutiny of the abstract' \citep{Landes1966BAAPG} and the additional `abstract rescrutinized' \citep{Lowman1998G} for more useful recommendations on the writing of these two important sections of a paper.
+
+\section{Materials and methods [Section title can be changed to be more specific]}
+\label{Method}
+
+\subsection{Explaining your method}
+
+The methods section is an essential part of most RING Proceedings papers. The algorithms should be precisely described or referenced using citations. It is a good practice to describe the general idea before going into the detailed descriptions. A workflow figure explaining the input, output and main steps of the method can be a great support for explaining the big picture. In some cases, it may even be presented in the general introduction. Writing style should aim at unrolling a logical reasoning and progression: before writing, start to think about the overall story and about where you want to take the reader. List the ideas and try to organize them and decide about a possible presentation order that will follow a logical progression. It may seem like an obvious statement, but descriptions should always come before comments and discussions. 
+
+A common pitfall in methodological papers is to jump into detailed descriptions about how the problem is solved before properly explaining the problem itself. A good practice to avoid this issue it to \textbf{make sure you explain the ‘why’ and the ‘what’ before explaining the ‘how’}.
+
+Beware that all models imply simplifications and rely on some assumptions. It is useful to make modeling hypotheses explicit and to briefly justify them (e.g., ``for convenience / simplicity, we assume that […]''. This is clearly where the use of the first person is appropriate, as it stresses some subjective decision or assumption made in the development of the method (elsewhere, please try to avoid the first person to focus on facts, unless in sentences where ``we'' means the reader and the authors, e.g., ``We see that Theorem 3 provides a robust basis for [\ldots]]''). Nonetheless, extensive discussions on model assumptions should, in general, be avoided in the methods section but rather postponed to Section \ref{discussion}.
+
+\subsection{Citations}
+
+Citations are essential to justify some statements, to help the reader find prior work in the field and to give credits to fellow scientists who inspired or motivated your work. 
+
+In RING Papers, we use a modified APA (sixth Edition) style with author names in small capitals. To avoid a tedious enumeration of citation formats, we provide the RING.bst file which can be used with BibTeX \footnote{If you prefer, we also provide the RING.cls citation language file which can be used using Zotero and Mendeley. Note that pandoc can use CSL files in principle, but we have not tested it.}
+
+\subsubsection{\LaTeX\ Commands for citation with BibTeX}
+
+References that support a sentence can be cited easily in alphabetical order using \verb|\citep{key}|, for example:``Several textbooks and reviews have extensively discussed theoretical and applied geomodeling \citep[e.g.,][]{Mallet2002, Mallet2014, Perrin2013, Ringrose2015, Wellmann2018AG}''. 
+
+In this example, the pre-citation text was included using \verb|\citep[e.g.,][]{key1,key2,| \verb|etc}|. For post-citation text as in ``\citep[chap. 3][]{Mallet2002}'', use \verb|\citep[][Chap. 3]{key}|. Both can be combined using for example \verb|\citep[See][and references therein]{key}|, yielding for example: ``Homogenization allows to transform a detailed elastic model into a smooth equivalent medium \citep[See][and references therein]{Capdeville2020AiG}''. Such precisions are important to add precision to the citation and to help the reader distinguish between example illustrating a general statement or some more specific contributions. 
+
+Direct citations in a sentence with author names followed by publication year in parenthesis are obtained using \verb|\citet{key}|, for example: ``\citet{Perrin2013} propose several ontologies''. 
+Here is another example of references with more authors \citep{Collon2017G, Freeman1990FB, Kolditz2012EES}: when more than three authors are present, only the first author is mentioned, followed by `et al.'. 
+
+\subsection{Figures}
+% That's how a figure should be included. You can use JPG/PNG/PDF images, or
+% PS/EPS
+\begin{figure}
+\centering\includegraphics[width=\textwidth]{Hecho}
+\caption{An example of a 17 cm width image best using the page width. This figure was prepared with Inkscape in SVG format and exported as a png raster image (generated here as a 17cm wide picture and 144 dpi). PDF format figures are also possible and are often appropriate for vector graphics. The caption should be long enough for a reader to quickly understand what the figure shows without having to read the full paper. Please try to place figures on top of page or after section titles. All figures should be referenced in the text, placed and numbered in order of first reference.}
+\label{fig:example}
+\end{figure}
+
+Figures may be prepared in SVG or AI format or other vector format. For inclusion in the \LaTeX\ document, PDF format is encouraged to preserve vector graphics. Note that in this case the pdf page should be cropped to the figure width and height. Figures including screenshots or pictures are can be included in \LaTeX\ using PNG (lossless) format (Figure \ref{fig:example}). JPEG is also possible for pictures, but should be avoided for screenshots because it is lossy. Please use Arial for figure annotations and labeling, and check that the label size has approximately the same size as the main text once the document is included. When preparing figures for RING Proceedings, it is best to think about the layout to make the best use of A4 page width (17cm width, landscape is often appropriate). 
+
+Please place figures at top or bottom of pages (the default placement option in \LaTeX) to avoid fragmenting the text. Include figures in the same order as cited in the text so that the reader does not see a reference to Fig. 6 before seeing the reference to Fig. 4. 
+
+
+\subsection{Equations}
+Although equations are often numbered and placed on a distinct line, please make them part of the text, and make sure that all symbols are described in the text on first use. Several schools exist about definition of symbols; at RING, we promote the practice of a short text explaining the principles and introducing most symbols before the equation. Please note that symbols should have the same font in the text than in the equation. Consider for example Bayes’ theorem, which computes the conditional probability distribution $f(\mathbf{m}|\mathbf{d})$ of some model parameters $\mathbf{m}$ given a set of observed data $\mathbf{d_{obs}}$ as
+\begin{equation}
+f(\mathbf{m}| \mathbf{d} = \mathbf{d_{obs}} )=
+    \frac{g( \mathbf{d} = \mathbf{d_{obs}} |\mathbf{m}) f_0(\mathbf{m})} 
+    {h( \mathbf{d} = \mathbf{d_{obs}} )}.
+\label{eq:Bayes}
+\end{equation}
+
+\noindent As you can see above, the equation is part of the sentence (it finishes with a column). When the sentence continues after the equation, you may place a coma after the equation and should use \verb|\noindent| on the next line, because the paragraph continues (the equation is just placed on a separate line and numbered for better visibility and later references). You may of course further describe and comment the equation afterwards: ``in Eq. (\ref{eq:Bayes}), the likelihood probability distribution $g(d|\mathbf{m})$ is computed by solving a multiphase flow problem which relates model parameters $\mathbf{m}$ to the data $\mathbf{d}$. The prior probability distribution of model parameters $f_0 (\mathbf{m})$ should describe possible model parameter values reflecting experience or belief before the data have been observed. Finally, the marginal data distribution $h(\mathbf{d})$ is a normalization term obtained by integrating the numerator over all possible model parameter values. Overall, Bayes Equation (\ref{eq:Bayes}) defines how the prior distribution of model parameters $f_0 (\mathbf{m})$ is updated into the posterior distribution $f(\mathbf{m}|\mathbf{d})$. This updating process reflects the new knowledge brought by the observed data and the physical link between model and data expressed in the likelihood.'' By the way, do not use double quotes in  \LaTeX, but `` to open and '' to close the citation. 
+
+Further useful recommendations about how to write good mathematics (and, more generally, good papers) are given by \citet{Lee2010}.
+
+\section{Results / Application [Section title can be changed to be more specific]}
+\label{appli}
+
+This is where you will discuss the application and results obtained. The past is generally the proper tense to describe physical or numerical experiments. However, you should use present when commenting results. For example:``We applied the proposed method to a Jurassic subsurface formation located the Eastern Paris Basin, France. […] Results show that […]''.
+
+When describing applications, please make sure that enough information is given, so that a good graduate student could reproduce your work / experiments. A table of parameters (here or in an appendix) can be useful to keep this section reasonably short and focused.
+
+There is a natural human tendency to only include positive results in papers. At RING, we are convinced that negative results can also be very useful. Therefore, we encourage you to include negative results in your paper if they provide insights. 
+
+Presenting and commenting results can be challenging. As in the main text, think about the story you want to tell. Plan ahead for creating figures where the features of interest clearly appear. Avoid paraphrasing figures in the main text or in the legend, but rather highlight the salient aspects and comment / interpret. A good results section should teach us something about the method and its applicability, or about the data. If you provide performance metrics, please don't forget to mention the hardware and the number of cores if parallel computing was used.  
+
+
+\section{Discussion [Section title can be changed to be more specific]}
+\label{discussion}
+
+The discussion part is where you will discuss the implications of your work about the open problems stated in the introduction. It is often appropriate to include references to feed the discussion and make it both broader and more substantial than a simple wish list fully centered on your work. In which case is your method most interesting? What is it good at, and what are the tradeoffs as compared to previous approaches? When/where does it break? 
+
+This section is the place to do philosophy, and to integrate the learnings from the method and results section. It is common that doubts may persist on some aspects of the paper, for instance on some the relevance of some assumptions. The discussion is the place to discuss(!) these doubts: as Richard Feynman said, ``When a scientist doesn't know the answer to a problem, he is ignorant. When he has a hunch as to what the result is, he is uncertain. And when he is pretty damn sure of what the result is going to be, he is still in some doubt''. In terms of style, please make a clear distinction between facts, interpretations, speculations, and opinions. 
+
+\section*{Conclusions}
+
+The conclusions are the main take-away messages of your paper. This is the place to build on the method, results and discussion sections to stress the main things we learned and the main insights gained from your work. 
+
+\section*{Acknowledgments}
+
+Typical acknowledgements for RING sponsored work read ``This work was performed
+in the frame of the RING project (\url{https://www.ring-team.org/})
+at Université de Lorraine. We would like to thank for their support [the
+industrial and academic sponsors of the RING-GOCAD Consortium managed by ASGA |
+other sponsors]. The authors would also like to thank [people] for [...] and
+[organizations] for providing the data used in this study. The software
+corresponding to this paper is available as [software name | example: GoNURBS
+plugin of ASPEN-SKUA geomodeling software]. We also acknowledge [AspenTech for the ASPEN-SKUA Software and development kit | SLB for the Eclipse software | INRIA for the Geogram library | any other software used].''
+
+% Set your BibTeX bibliography file here (without .bib)
+% Bibliographystyle is defined in the RING class
+\bibliography{MyBiblioFile}
+
+\end{document}
+
+%------------------------------------------
